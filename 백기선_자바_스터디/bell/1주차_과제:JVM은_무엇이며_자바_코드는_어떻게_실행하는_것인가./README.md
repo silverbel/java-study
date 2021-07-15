@@ -32,7 +32,7 @@ JVM은 `Java virtual machine`을 줄인 것으로 자바를 실행하기 위한
 
 JVM은 크게 ClassLoader, Runtime Data Area, Excution Engine 3가지로 구성되어 있다.
 
-jvm구성.png![image](https://user-images.githubusercontent.com/20640626/125809526-832d184b-b0e8-41d7-bca3-ab8a79769ced.png)
+![image](https://user-images.githubusercontent.com/20640626/125809526-832d184b-b0e8-41d7-bca3-ab8a79769ced.png)
 
 - Class Loader
 
@@ -85,7 +85,7 @@ jvm구성.png![image](https://user-images.githubusercontent.com/2064062
 
         - heap-area 구조 (이미지)
 
-            gc-heap.png![image](https://user-images.githubusercontent.com/20640626/125809955-5d18a35e-75ba-4f6a-9295-e3dae5d30d08.png)
+            ![image](https://user-images.githubusercontent.com/20640626/125809955-5d18a35e-75ba-4f6a-9295-e3dae5d30d08.png)
 
         - minor GC
 
