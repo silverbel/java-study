@@ -85,7 +85,7 @@ jvm구성.png![image](https://user-images.githubusercontent.com/2064062
 
         - heap-area 구조 (이미지)
 
-            ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a329b46-a6d3-46ce-b74d-c85209fde3c0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a329b46-a6d3-46ce-b74d-c85209fde3c0/Untitled.png)
+            gc-heap.png![image](https://user-images.githubusercontent.com/20640626/125809955-5d18a35e-75ba-4f6a-9295-e3dae5d30d08.png)
 
         - minor GC
 
