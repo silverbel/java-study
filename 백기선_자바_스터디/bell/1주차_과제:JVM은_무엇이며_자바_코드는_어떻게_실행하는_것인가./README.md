@@ -32,7 +32,7 @@ JVM은 `Java virtual machine`을 줄인 것으로 자바를 실행하기 위한
 
 JVM은 크게 ClassLoader, Runtime Data Area, Excution Engine 3가지로 구성되어 있다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/124b1380-11aa-418f-b6be-5c672126b5e6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/124b1380-11aa-418f-b6be-5c672126b5e6/Untitled.png)
+jvm구성.png![image](https://user-images.githubusercontent.com/20640626/125809526-832d184b-b0e8-41d7-bca3-ab8a79769ced.png)
 
 - Class Loader
 
