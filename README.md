@@ -2,11 +2,11 @@
 
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
 
-- Study type: **-**
-- Study lead: **-**
-- Study start date: **-**
+- Study type: off-line
+- Study lead: @silverbel, @evan-hwang, @junhyukAndroid
+- Study start date: 2021-07-10
 - Study end date: **-**
-- Reference Book: **-**
+- Reference Book: https://github.com/whiteship/live-study
 
 ✏️ [스터디 설명]
 
