@@ -15,7 +15,8 @@
 
 부호를 표현한다면 첫번째 비트는 부호를 나타나게 되어 나머지 n-1의 비트를 이용하여 수를 표현하게 됩니다. 또한 양수에 0을 포함하여 계산하기 때문에 부호있는 정수형의 표현 범위는 -2^n  ~ 2^n -1 가 됩니다.
 
-[정수형](https://www.notion.so/d83bc079301a4440aef472c689512d5a)
+<img width="721" alt="스크린샷 2021-07-24 오후 5 57 50" src="https://user-images.githubusercontent.com/20640626/126863349-ab3564ad-d469-4174-a30e-cf3c6e3f613a.png">
+
 
 - **실수형 (float, double)**
 
@@ -27,13 +28,15 @@
 
 따라서 변수를 선언할때 실수의 정밀도를 반드시 고려하여 선정해야할 필요가 있습니다.
 
-[실수형](https://www.notion.so/f0f578aaec17478ca11a7cba6a33a1fb)
+<img width="846" alt="스크린샷 2021-07-24 오후 5 58 46" src="https://user-images.githubusercontent.com/20640626/126863373-14d35216-5e0d-4927-be10-0dd8e3888ec8.png">
+
 
 - **논리형(boolean) & 문자형(char)**
 
 나머지 타입으로는 논리형 boolean과 문자형 char가 있습니다. 논리형 boolean은 참,거짓을 판단하기 때문에 1bit이면 충분하지만 Java가 데이터를 다루는 최소 범위가 1 byte이기 때문에 1 byte를 할당합니다. 문자형 char는 유니코드를 사용하기 때문에 유니코드의 요구 범위인 2 byte가 필요로 하여 2byte를 할당합니다.
 
-[제목 없음](https://www.notion.so/287b3f4c5b7e499e9dd87eab790b4e3b)
+<img width="738" alt="스크린샷 2021-07-24 오후 5 59 27" src="https://user-images.githubusercontent.com/20640626/126863388-20b6d629-56e6-4b29-a939-b68e9cfc1f30.png">
+
 
 > overflow 실습예제
 
