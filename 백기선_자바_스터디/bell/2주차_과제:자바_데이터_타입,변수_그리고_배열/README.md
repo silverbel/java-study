@@ -45,10 +45,8 @@ for (int i=0; i<5; i++) {
     System.out.println(num);
 }
 ```
+![overflow예제](https://user-images.githubusercontent.com/20640626/126863155-0bf0cf2c-839d-4310-99ed-09bd5bc94ccc.png)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43bec5d5-3bcc-410c-86dc-476a95739f5c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43bec5d5-3bcc-410c-86dc-476a95739f5c/Untitled.png)
-
-결과 화면
 
 ## 프리미티브 타입(기본형)과 레퍼런스(참조형) 타입
 
@@ -60,8 +58,7 @@ for (int i=0; i<5; i++) {
 
                             JVM의 **힙영역**에 **값**이 저장되고, **스택영역**에 **주소값**이 담긴다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df89f18e-6e78-4792-97d4-eda13fb5b3b3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df89f18e-6e78-4792-97d4-eda13fb5b3b3/Untitled.png)
-
+<img width="789" alt="스크린샷 2021-07-24 오후 4 08 10" src="https://user-images.githubusercontent.com/20640626/126863072-19100d39-4310-48d2-a166-d817a53f0d94.png">
 [사진참고] [https://hs5555.tistory.com/81](https://hs5555.tistory.com/81) 
 
 ## 리터럴
@@ -135,8 +132,7 @@ int a;       // 변수타입 변수명;
         byte a = (byte) b;
         System.out.println(a);    // a = -127
         ```
-
-        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98965742-53eb-4514-9d3e-91eec1592e21/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98965742-53eb-4514-9d3e-91eec1592e21/Untitled.png)
+        ![2week](https://user-images.githubusercontent.com/20640626/126863045-575b4572-cddd-4b7c-8334-21dc56794631.jpeg)
 
     - 타입 프로모션 : 자동 형변환
 
