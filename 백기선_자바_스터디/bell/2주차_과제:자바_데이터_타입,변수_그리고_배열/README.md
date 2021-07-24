@@ -1,0 +1,193 @@
+# **목표**
+
+- 자바의 프리미티브 타입, 변수 그리고 배열을 사용하는 방법을 익하기
+
+## 프리미티브 타입 종류와 값의 범위 그리고 기본 값
+
+**프리미티브 타입의 특징**
+-. 기본값이 존재하기 때문에 NULL값이 존재하지 않는다.
+-. 스택 메모리에 저장된다.
+-. 담을수 있는 크기보다 큰 값을 넣으려 하면, 컴파일에러(overflow)가 발생한다.
+
+- **정수형 (byte, short, int ,long)**
+
+![https://github.com/kksb0831/Practice_project/raw/master/asd1.JPG](https://github.com/kksb0831/Practice_project/raw/master/asd1.JPG)
+
+부호를 표현한다면 첫번째 비트는 부호를 나타나게 되어 나머지 n-1의 비트를 이용하여 수를 표현하게 됩니다. 또한 양수에 0을 포함하여 계산하기 때문에 부호있는 정수형의 표현 범위는 $-2^n$  ~ $2^n$ -1 가 됩니다.
+
+[정수형](https://www.notion.so/d83bc079301a4440aef472c689512d5a)
+
+- **실수형 (float, double)**
+
+실수형에서는 값을 부호, 지수, 가수로 나누어 저장됩니다. 따라서 같은 크기임에도 훨씬 큰범위를 표현 가능하지만 실수형은 원래 저장하려던 값과 실제 저장된 값이 오차가 날 수 있습니다. 그래서 오차없는 자리 수인 정밀도가 굉장히 중요한데 정밀도를 계산하는 방법은 가수 부분의 데이터크기에 관련되어 있습니다.
+
+![https://github.com/kksb0831/Practice_project/raw/master/float.JPG](https://github.com/kksb0831/Practice_project/raw/master/float.JPG)
+
+위의 이미지에서 처럼 실수형 float의 가수부분은 23비트인데 여기서 정규화를 통해 24까지 표현이 가능합니다.       2^24은 10^7 보다는 크고 10^8 보다는 작기에 float의 정밀도는 7이 됩니다. double의 경우에는 가수부분이 52비트이고 위와 같은 계산을 통하여 정밀도를 계산하면 정밀도는 15자리가 됩니다.
+
+따라서 변수를 선언할때 실수의 정밀도를 반드시 고려하여 선정해야할 필요가 있습니다.
+
+[실수형](https://www.notion.so/f0f578aaec17478ca11a7cba6a33a1fb)
+
+- **논리형(boolean) & 문자형(char)**
+
+나머지 타입으로는 논리형 boolean과 문자형 char가 있습니다. 논리형 boolean은 참,거짓을 판단하기 때문에 1bit이면 충분하지만 Java가 데이터를 다루는 최소 범위가 1 byte이기 때문에 1 byte를 할당합니다. 문자형 char는 유니코드를 사용하기 때문에 유니코드의 요구 범위인 2 byte가 필요로 하여 2byte를 할당합니다.
+
+[제목 없음](https://www.notion.so/287b3f4c5b7e499e9dd87eab790b4e3b)
+
+> overflow 실습예제
+
+```java
+byte num = 127;
+
+for (int i=0; i<5; i++) {
+    num += 1;
+    System.out.println(num);
+}
+```
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43bec5d5-3bcc-410c-86dc-476a95739f5c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43bec5d5-3bcc-410c-86dc-476a95739f5c/Untitled.png)
+
+결과 화면
+
+## 프리미티브 타입(기본형)과 레퍼런스(참조형) 타입
+
+- 프리미티브 타입 : 변수를 선언 할때 메모리에 고정된 크기로 저장.
+
+                               JVM의 **스택영역**에 **값**으로 저장된다.
+
+- 레퍼런스 타입 : 변수를 선언 할때 메모리의 크기가 정해져있진 않고,
+
+                            JVM의 **힙영역**에 **값**이 저장되고, **스택영역**에 **주소값**이 담긴다.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df89f18e-6e78-4792-97d4-eda13fb5b3b3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df89f18e-6e78-4792-97d4-eda13fb5b3b3/Untitled.png)
+
+[사진참고] [https://hs5555.tistory.com/81](https://hs5555.tistory.com/81) 
+
+## 리터럴
+
+리터럴은 **데이터 그 자체**를 의미합니다. 상수와 많은 착각을 일으키고는 하는데 상수의 경우 한 번만 값을 저장 가능한 변수를 의미하고 리터럴의 경우 데이터 그자체를 의미하기 때문에 차이가 있습니다. 
+
+예를 들어 아래의 코드에서 int에 대입하는 1이 리터럴이 되는 것이며 앞에 final을 붙이면 상수가 되는 것입니다. 따라서 각각의 변수 타입에 따라 표현범위에 있는 값이 리터럴로 입력 가능합니다.
+
+int a = 1;        //리터럴은 1
+final int a = 1;  //상수로 선언
+
+## 변수 선언 및 초기화하는 방법
+
+- 변수선언 이란?
+
+    변수를 선언한다는 것은 메모리에 데이터를 저장할 공간을 지정해 주는 것입니다. 변수를 선언하는 방식은 아래 코드와 같습니다.
+
+int a;       // 변수타입 변수명;
+
+이렇게 변수가 선언되면 변수타입에 해당하는 크기만큼 메모리에 용량이 할당됩니다.
+
+- 변수의 종류
+
+    클래스 변수     : 클래스가 참조될때 활용되어 전체 클래스에 적용되는 변수
+
+    인스턴스 변수 : 인스턴스(객체)가 생성될때 같이 생성되는 변수
+
+    지역 변수        : 메소드안에서 선언되고 메소드안에서만 사용가능한 변수 
+
+- 초기화의 종류
+
+    **명시적 초기화**
+    변수타입 변수명 = 초기화할 값;
+    ex) int a = 0;
+
+    **생성자 활용 초기화**
+    Person man = new Person();
+    man.name = "은종현";
+    man.age = 30;
+    man.isMarried = true;
+
+    //만약 기본 생성자가 아닌 매개변수가 정해진 생성자가 정의되어 있다면 이렇게 초기화 할 수 도 있다.
+    Person man = new Person("은종현", 30, true);
+
+    **초기화블록을 활용한 클래스, 인스턴스 변수 초기화**
+    class Person{
+        static { }        //클래스 초기화 블럭
+        {        }            //인스턴스 초기화 블럭
+    }
+
+## 변수의 스코프와 라이프타임
+
+변수의 스코프란 변수에 대하여 접근과 변수가 존재할 수 있는 영역을 의미합니다. 이런 변수의 스코프로 구분해보면 클래스 변수, 인스턴스 변수, 지역 변수로 나누어 볼 수 있습니다. 이런 변수의 종류를 결정하는 것은 '**변수가 선언된 위치**'가 결정하게 됩니다.
+
+먼저 클래스 변수와 인스턴스 변수는 클래스의 내부에 선언하여야 하는데 그중 클래스 변수는 static을 앞에 붙여서 선언해주어야 합니다. 지역변수는 메소드 안에서 선언을 하면 지역변수로 선언되게 됩니다.
+
+[제목 없음](https://www.notion.so/e5d7ef02e76846b5b9314de7b88c2955)
+
+각각의 변수의 라이프타임은 클래스 변수의 경우 프로그램이 종료할때까지 적용되고 인스턴스 변수의 경우는 인스턴스가 참조 되고 있을때에는 유지되다가 객체를 참조하는 변수가 없을 경우 JVM의 Garbage Collector가 제거하게 됩니다. 지역변수의 경우 메소드가 끝나면 소멸되어 사용할 수 없게 됩니다.
+
+## 타입 변환, 캐스팅 그리고 타입 프로모션
+
+타입변환이 필요한 이유는?
+자바에서 연산은 동일한 데이터 타입에서만 가능하다.
+
+- 타입변환의 종류
+    - 캐스팅 : 강제 형변환
+
+        ```java
+        short b = 129;
+        byte a = (byte) b;
+        System.out.println(a);    // a = -127
+        ```
+
+        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98965742-53eb-4514-9d3e-91eec1592e21/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98965742-53eb-4514-9d3e-91eec1592e21/Untitled.png)
+
+    - 타입 프로모션 : 자동 형변환
+
+        ```java
+        public static void main(String[] args) {
+            byte a = 10;
+            int b = a;
+            System.out.println(b);
+        }
+        ```
+
+        이런 경우에는 1byte의 byte타임을 4byte인 int에 넣기 때문에 별다른 오류나 문법의 필요없이 형변환이 자동으로 이뤄지게됩니다. 이처럼 자동 형변환이 이루어지는 순서는 다음과 같습니다.
+
+타입 프로모션이 이뤄지는 순서
+**byte(1) < short(2) < int(4) < long(8) < float(4) < double(8)**
+
+## 1차 및 2차 배열 선언하기
+
+자바에서 배열의 선언은 두 가지 방법으로 가능합니다. 변수 선언에서 데이터타입 뒤에 []를 입력하는 방법과 변수 명뒤에 []를 입력하는 방법입니다.
+
+```java
+// 1차 배열
+int[] array;   // array = null 
+int array[];   // array = null
+// 2차 배열
+int[][] array;   
+int array[][];   
+```
+
+```java
+// 2차원 배열 선언 및 초기화시 참조값들 확인.
+int arr[][] = {{11,12}, {21,22}, {31,32}};
+```
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6aa9fbe-4f6a-48ca-82db-425fbb63868d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6aa9fbe-4f6a-48ca-82db-425fbb63868d/Untitled.png)
+
+arr의 참조값들
+
+## 타입 추론, var
+
+var 키워드는 **지역변수이면서 선언과 동시에 초기화가 필수적으로 요구**된다.
+
+```java
+var message = "ABCD";
+```
+
+자료형 없이 단순하게 var라는 지역변수로 선언했음에도 컴파일러는 오른쪽에 있는 초기화 값을 통해 해당 변수의 타입을 유추한다.  하지만 이런 var 역시도 다이아몬드 연산자 방식은 지원하지 않는다.
+
+즉 아래와 같은 타입은 지원하지 않는다.
+
+```java
+//아래 소스는 타입을 유추할 수 없기 때문에 컴파일 에러가 발생한다.
+var messages = new ArrayList<>();
+```
