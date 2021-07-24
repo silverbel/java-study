@@ -13,7 +13,7 @@
 
 ![https://github.com/kksb0831/Practice_project/raw/master/asd1.JPG](https://github.com/kksb0831/Practice_project/raw/master/asd1.JPG)
 
-부호를 표현한다면 첫번째 비트는 부호를 나타나게 되어 나머지 n-1의 비트를 이용하여 수를 표현하게 됩니다. 또한 양수에 0을 포함하여 계산하기 때문에 부호있는 정수형의 표현 범위는 $-2^n$  ~ $2^n$ -1 가 됩니다.
+부호를 표현한다면 첫번째 비트는 부호를 나타나게 되어 나머지 n-1의 비트를 이용하여 수를 표현하게 됩니다. 또한 양수에 0을 포함하여 계산하기 때문에 부호있는 정수형의 표현 범위는 -2^n  ~ 2^n -1 가 됩니다.
 
 [정수형](https://www.notion.so/d83bc079301a4440aef472c689512d5a)
 
