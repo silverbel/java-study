@@ -171,9 +171,9 @@ int array[][];
 int arr[][] = {{11,12}, {21,22}, {31,32}};
 ```
 
-<img width="261" alt="스크린샷 2021-07-24 오후 5 21 17" src="https://user-images.githubusercontent.com/20640626/126863005-9bdc4ced-a618-487f-a826-e3a328f3e5b8.png">
+<img width="261" alt="arr의 참조값들" src="https://user-images.githubusercontent.com/20640626/126863005-9bdc4ced-a618-487f-a826-e3a328f3e5b8.png">
 
-arr의 참조값들
+
 
 ## 타입 추론, var
 
