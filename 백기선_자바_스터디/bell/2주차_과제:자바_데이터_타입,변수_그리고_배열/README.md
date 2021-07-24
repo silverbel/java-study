@@ -193,5 +193,5 @@ var messages = new ArrayList<>();
 ```
 
 
-깨지는 부분이 존재 하네요.. ㅠㅠ 아래 notion 링크를 참고해주세요
+깨지는 부분이 존재 하네요.. ㅠㅠ 아래 notion 링크를 참고해주세요.
 https://just-drink-694.notion.site/2-7437732a0a1b43859e7021173bbbbe00
